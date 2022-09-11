@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Snipped",
+  "version": "1",
+  "description": "takes a screenshot of an element specified by its id",
+  "icons":{ "48": "scissors.png"},
+  "action": {
+    "default_icon": "scissors.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "js": [ "contentscript.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+   }],
+  "permissions": [ "activeTab", "tabs" ]
+}
